@@ -1,10 +1,10 @@
 /**
- * A performance test file to compare the difference in performance of getting 
- * from the Trie when using limits. This can be run by 
+ * A performance test file to compare the difference in performance of getting
+ * from the Trie when using limits. This can be run by
  * `node trieGetTest.js`
  */
 
-var TrieSearch = require('./src/TrieSearch');
+var TrieSearch = require('../../src/TrieSearch');
 var dict = require('./dictionary.json');
 const NUM_ITERATIONS = 100
 

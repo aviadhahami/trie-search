@@ -4,11 +4,13 @@
   "license": "MIT",
   "description": "A trie implementation that maps keys to objects for rapid retrieval by phrases. Most common use will be for typeahead searches.",
   "version": "1.2.11",
-  "main": "index.js",
+  "main": "lib/index.js",
   "url": "https://github.com/joshjung/trie-search",
   "homepage": "https://github.com/joshjung/trie-search",
   "email": "joshua.p.jung@gmail.com",
   "scripts": {
+    "postinstall": "npm run build",
+    "build": "rimraf ./build && tsc",
     "test": "jest",
     "release:major": "npm version major && git push --follow-tags && npm publish",
     "release:minor": "npm version minor && git push --follow-tags && npm publish",
@@ -21,9 +23,9 @@
   "files": [
     "src",
     "test",
-    "index.js",
-    "performance.js",
-    "dictionary.json"
+    "src/index.js",
+    "test/performance/performance.js",
+    "test/performance/dictionary.json"
   ],
   "keywords": [
     "trie",
@@ -39,6 +41,9 @@
     "hasharray": "^1.1.1"
   },
   "devDependencies": {
-    "jest": "^26.4.2"
+    "@types/node": "^14.10.3",
+    "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.2"
   }
 }

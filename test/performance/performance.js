@@ -3,7 +3,7 @@
  * entire dictionary and checking memory and speed to load.
 \*=========================================================*/
 
-var TrieSearch = require('./src/TrieSearch');
+var TrieSearch = require('../../src/TrieSearch');
 var dict = require('./dictionary.json');
 var util = require('util');
 
